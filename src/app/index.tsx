@@ -36,7 +36,9 @@ export default function HomeScreen() {
           <Text style={[styles.subtitle, { color: c.textSecondary }]}>Strip the AI tells out of your text</Text>
         </View>
         <Link href="/settings" asChild>
-          <Pressable accessibilityRole="button" style={[styles.gear, { borderColor: c.border }]}>
+          {/* Flatten: a child of expo-router's <Slot> (Link asChild) must not receive an
+              array style — in production RNW crashes applying it (blanks the app). */}
+          <Pressable accessibilityRole="button" style={StyleSheet.flatten([styles.gear, { borderColor: c.border }])}>
             <Text style={[styles.gearText, { color: c.text }]}>Settings</Text>
           </Pressable>
         </Link>
