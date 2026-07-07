@@ -52,5 +52,5 @@ DEAIFY_UPLOAD_KEY_PASSWORD=********
 
 1. Go to the [Play Console](https://play.google.com/console) with your company account.
 2. Create the app, then **Production → Create new release**.
-3. Upload `app-release.aab`. Package name: **`com.deaify.app`** (permanent).
+3. Upload `app-release.aab`. Package name: **`com.deAIfy.app`** (permanent).
 4. Complete the store listing (the icons in `assets/images/` and `docs/og-image.png` can be reused).
