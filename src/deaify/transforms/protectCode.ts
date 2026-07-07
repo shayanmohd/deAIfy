@@ -1,5 +1,5 @@
 // Masks fenced ```code``` and inline `code` (and bare URLs) with placeholder tokens
-// BEFORE the destructive passes, then restores them afterwards — so we never straighten
+// BEFORE the destructive passes, then restores them afterwards, so we never straighten
 // quotes or swap dashes inside code or links.
 //
 // Placeholders use Unicode Private-Use-Area chars so the space/quote/dash/filler passes

@@ -7,7 +7,7 @@ export const anthropicProvider: LlmProvider = {
   id: 'anthropic',
   label: 'Anthropic (Claude)',
   defaultModel: 'claude-haiku-4-5',
-  keyHint: 'Create a key at console.anthropic.com. Set a spend limit — the app uses your key directly.',
+  keyHint: 'Create a key at console.anthropic.com. Set a spend limit; the app uses your key directly.',
   models: [
     { id: 'claude-haiku-4-5', label: 'Haiku 4.5 (cheap, default)' },
     { id: 'claude-sonnet-5', label: 'Sonnet 5 (balanced)' },

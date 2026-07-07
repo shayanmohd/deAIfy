@@ -16,7 +16,7 @@ export interface LlmProvider {
   label: string;
   defaultModel: string;
   models: ModelOption[];
-  /** How the user obtains a key — surfaced in Settings. */
+  /** How the user obtains a key, surfaced in Settings. */
   keyHint: string;
   /** Returns ONLY the rewritten text. Throws LlmError on failure. */
   rewrite(input: string, cfg: LlmConfig, signal?: AbortSignal): Promise<string>;

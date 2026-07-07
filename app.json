@@ -7,7 +7,7 @@
     "icon": "./assets/images/icon.png",
     "scheme": "deaify",
     "userInterfaceStyle": "automatic",
-    "description": "Strip the AI tells out of your text — remove em dashes, curly quotes, hidden unicode and filler words, or rewrite it to sound human with your own AI key.",
+    "description": "Strip the AI tells out of your text: remove em dashes, curly quotes, hidden unicode and filler words, or rewrite it to sound human with your own AI key.",
     "primaryColor": "#208AEF",
     "ios": {
       "supportsTablet": true

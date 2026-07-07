@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Platform, StyleSheet, Switch, Text, TextInput, View } from 'react-native';
+import { Linking, Platform, StyleSheet, Switch, Text, TextInput, View } from 'react-native';
+
+const PRIVACY_URL = 'https://shayanmohd.github.io/deAIfy/privacy.html';
 import { useTheme } from '@/hooks/use-theme';
 import { useSettings } from '@/hooks/useSettings';
 import { PROVIDER_LIST, getProvider } from '@/llm/registry';
@@ -100,11 +102,19 @@ export function SettingsForm() {
         <Text style={[styles.caveatText, { color: c.textSecondary }]}>
           Your key never leaves this device except in requests to {provider.label}.{' '}
           {Platform.OS === 'web'
-            ? 'On the web it is stored in this browser only — anyone with access to this browser (or a malicious extension) could read it.'
+            ? 'On the web it is stored in this browser only. Anyone with access to this browser (or a malicious extension) could read it.'
             : 'It is stored in the encrypted Android Keystore.'}{' '}
           Use a scoped, spend-limited, revocable key.
         </Text>
       </View>
+
+      <Text
+        accessibilityRole="link"
+        onPress={() => Linking.openURL(PRIVACY_URL)}
+        style={[styles.privacy, { color: c.accent }]}
+      >
+        Privacy Policy
+      </Text>
     </View>
   );
 }
@@ -134,4 +144,5 @@ const styles = StyleSheet.create({
   status: { fontSize: 13, fontWeight: '600' },
   caveat: { borderRadius: 10, borderWidth: 1, padding: 12 },
   caveatText: { fontSize: 12, lineHeight: 18 },
+  privacy: { fontSize: 14, fontWeight: '600', textAlign: 'center', paddingVertical: 8 },
 });

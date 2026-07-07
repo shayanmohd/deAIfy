@@ -2,7 +2,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { ProviderId } from '../llm/types';
 import type { DashStyle, FillerMode } from '../deaify/types';
 
-// Non-secret preferences (NOT the API key — that lives in secureKeyStore).
+// Non-secret preferences (NOT the API key, which lives in secureKeyStore).
 export interface AppSettings {
   providerId: ProviderId;
   model: string;
@@ -48,6 +48,6 @@ export async function saveSettings(settings: AppSettings): Promise<void> {
   try {
     await AsyncStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
   } catch {
-    // Non-fatal — settings simply won't persist this session.
+    // Non-fatal: settings simply won't persist this session.
   }
 }

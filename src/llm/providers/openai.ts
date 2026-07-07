@@ -7,7 +7,7 @@ export const openaiProvider: LlmProvider = {
   id: 'openai',
   label: 'OpenAI (GPT)',
   defaultModel: 'gpt-4o-mini',
-  keyHint: 'Create a key at platform.openai.com. Set a usage limit — the app uses your key directly.',
+  keyHint: 'Create a key at platform.openai.com. Set a usage limit; the app uses your key directly.',
   models: [
     { id: 'gpt-4o-mini', label: 'GPT-4o mini (cheap, default)' },
     { id: 'gpt-4o', label: 'GPT-4o (balanced)' },

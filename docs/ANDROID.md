@@ -4,7 +4,7 @@ deAIfy uses Expo's [Continuous Native Generation](https://docs.expo.dev/workflow
 the `android/` folder is **generated** from `app.json` and is git-ignored. There are two ways to
 produce an installable/uploadable build.
 
-## Option A — EAS (cloud, no local Android SDK needed)
+## Option A: EAS (cloud, no local Android SDK needed)
 
 ```bash
 npm run build:android         # eas build -p android --profile preview  → .apk
@@ -13,7 +13,7 @@ npx eas build -p android --profile production   # → .aab for the Play Store
 
 Requires a free Expo account (`npx eas login`). EAS manages the signing keystore for you.
 
-## Option B — Local build (what this repo is set up for)
+## Option B: Local build (what this repo is set up for)
 
 Prerequisites: **JDK 17** and the **Android SDK** (`ANDROID_HOME` set).
 
@@ -46,7 +46,7 @@ DEAIFY_UPLOAD_KEY_PASSWORD=********
 
 > **Keep the keystore and its passwords safe.** With **Play App Signing** (recommended, enabled by
 > default for new apps) Google holds the real app-signing key, so a lost *upload* key can be reset
-> via Google Play support — but back it up anyway.
+> via Google Play support, but back it up anyway.
 
 ### Uploading to the Play Store
 

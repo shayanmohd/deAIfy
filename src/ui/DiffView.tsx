@@ -11,7 +11,7 @@ export function DiffView({ segments }: Props) {
   const c = useTheme();
   const changed = segments.some((s) => s.added || s.removed);
   if (!changed) {
-    return <Text style={[styles.clean, { color: c.textSecondary }]}>No changes — text already looks clean.</Text>;
+    return <Text style={[styles.clean, { color: c.textSecondary }]}>No changes. Text already looks clean.</Text>;
   }
   return (
     <View style={styles.wrap}>

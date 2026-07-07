@@ -2,7 +2,7 @@ import type { FillerEntry } from '../types';
 
 // Single source of truth for AI "tell" words/phrases.
 // `soften: null` means delete the phrase and collapse the surrounding punctuation/space.
-// Extend freely — the filler transform compiles this into one alternation regex at load.
+// Extend freely: the filler transform compiles this into one alternation regex at load.
 export const FILLER_WORDS: FillerEntry[] = [
   // Inflated buzzwords
   { match: 'delve', soften: 'look', category: 'buzzword' },
@@ -33,7 +33,7 @@ export const FILLER_WORDS: FillerEntry[] = [
   { match: 'notably', soften: null, category: 'hedge' },
   { match: 'importantly', soften: null, category: 'hedge' },
 
-  // Meta-commentary (multi-word — matched before single words by length)
+  // Meta-commentary (multi-word, matched before single words by length)
   { match: "it's important to note that", soften: null, category: 'meta' },
   { match: 'it is important to note that', soften: null, category: 'meta' },
   { match: "it's important to note", soften: null, category: 'meta' },

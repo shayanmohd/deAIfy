@@ -43,7 +43,7 @@ export function ProControls({ input }: Props) {
       <View style={[styles.notice, { backgroundColor: c.backgroundElement, borderColor: c.border }]}>
         <Text style={[styles.noticeText, { color: c.textSecondary }]}>
           Uses <Text style={{ color: c.text, fontWeight: '700' }}>your own {provider.label} key</Text>. Requests go
-          straight from this device to the provider — no server in between.
+          straight from this device to the provider, with no server in between.
         </Text>
       </View>
 
@@ -80,7 +80,7 @@ export function ProControls({ input }: Props) {
 
       {output != null && (
         <View style={styles.result}>
-          <Text style={[styles.resultLabel, { color: c.textSecondary }]}>AI rewrite — review before using</Text>
+          <Text style={[styles.resultLabel, { color: c.textSecondary }]}>AI rewrite, review before using</Text>
           <View style={[styles.outputBox, { backgroundColor: c.backgroundElement, borderColor: c.border }]}>
             <Text style={[styles.outputText, { color: c.text }]} selectable>
               {output}

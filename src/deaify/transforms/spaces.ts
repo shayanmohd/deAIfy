@@ -1,7 +1,7 @@
 import type { TransformResult } from '../types';
 import { applyRegex } from './util';
 
-// Truly invisible characters AI models often emit — removed entirely.
+// Truly invisible characters AI models often emit, removed entirely.
 const ZERO_WIDTH_CODES = [
   0x200b, // zero-width space
   0x200c, // zero-width non-joiner
@@ -13,7 +13,7 @@ const ZERO_WIDTH_CODES = [
   0x200f, // right-to-left mark
 ];
 
-// Non-standard whitespace that renders as a space — normalised to a plain space (U+0020).
+// Non-standard whitespace that renders as a space, normalised to a plain space (U+0020).
 const WEIRD_SPACE_CODES = [
   0x00a0, // no-break space
   0x2000, 0x2001, 0x2002, 0x2003, 0x2004, 0x2005, 0x2006, 0x2007, 0x2008, 0x2009, 0x200a, // width-space block

@@ -37,7 +37,7 @@ export default function HomeScreen() {
         </View>
         <Link href="/settings" asChild>
           {/* Flatten: a child of expo-router's <Slot> (Link asChild) must not receive an
-              array style — in production RNW crashes applying it (blanks the app). */}
+              array style. In production RNW crashes applying it (blanks the app). */}
           <Pressable accessibilityRole="button" style={StyleSheet.flatten([styles.gear, { borderColor: c.border }])}>
             <Text style={[styles.gearText, { color: c.text }]}>Settings</Text>
           </Pressable>

@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="docs/og-image.png" alt="deAIfy — strip the AI tells out of your text" width="720">
+  <img src="docs/og-image.png" alt="deAIfy: strip the AI tells out of your text" width="720">
 </p>
 
 <h1 align="center">deAIfy</h1>
 
 <p align="center">
-  Strip the tell-tale signs of AI writing out of your text — em dashes, curly quotes,
-  hidden unicode, and filler words — or rewrite it to sound human.
+  Strip the tell-tale signs of AI writing out of your text (em dashes, curly quotes,
+  hidden unicode, and filler words), or rewrite it to sound human.
   <br>One <a href="https://expo.dev">Expo</a> codebase → <b>web</b> + <b>Android</b>.
 </p>
 
@@ -27,7 +27,7 @@
 | | **Cleanup (free)** | **AI rewrite (Pro)** |
 |---|---|---|
 | Runs | Fully on-device, **offline** | Your own LLM key, direct to provider |
-| Cost | **Free forever** — no server, no bills | You pay your provider directly |
+| Cost | **Free forever**, no server, no bills | You pay your provider directly |
 | What it does | Rule-based: fixes punctuation & unicode, flags/softens filler | Genuine rewrite to sound human |
 | Privacy | Nothing leaves your device | Text goes only to the provider you pick |
 
@@ -39,14 +39,14 @@ run it.
 
 - **Em / en dashes** (`—` `–`) → comma, spaced hyphen, or plain hyphen (your choice)
 - **Curly quotes & apostrophes** (`“ ” ‘ ’`) → straight `"` and `'`
-- **Hidden characters** — non-breaking spaces, zero-width chars, BOM, and other invisible unicode
-- **Filler words** — *delve, tapestry, leverage, moreover, in conclusion, it's important to note…* — **flag** them or **soften** them away
+- **Hidden characters**: non-breaking spaces, zero-width chars, BOM, and other invisible unicode
+- **Filler words**: *delve, tapestry, leverage, moreover, in conclusion, it's important to note…*, then **flag** them or **soften** them away
 - Code blocks, inline code, and URLs are **protected** and never touched
 - A live diff shows exactly what changed, with per-category counts
 
 <p align="center">
   <img src="docs/screenshots/home.png" alt="Cleanup mode with live diff" width="49%">
-  <img src="docs/screenshots/settings.png" alt="Settings — bring your own key" width="49%">
+  <img src="docs/screenshots/settings.png" alt="Settings: bring your own key" width="49%">
 </p>
 
 ## Getting started
@@ -83,7 +83,7 @@ the DOM. That keeps it unit-tested in plain Node with `vitest`, idempotent, and 
 Your API key never leaves your device except in requests to the provider you choose.
 
 - **Android:** stored in the encrypted **Android Keystore** (`expo-secure-store`).
-- **Web:** stored **in your browser only** — `sessionStorage` by default, `localStorage` if you
+- **Web:** stored **in your browser only**: `sessionStorage` by default, `localStorage` if you
   tick *"Remember on this device"*. Both are plaintext on the origin, so use a **scoped,
   spend-limited, revocable** key.
 

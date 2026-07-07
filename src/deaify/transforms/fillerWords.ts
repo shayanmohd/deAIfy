@@ -26,7 +26,7 @@ function buildRegex(entry: FillerEntry): RegExp {
  * no deletions is untouched. Idempotent.
  *
  * Recapitalisation deliberately fires ONLY after real sentence punctuation (. ! ?) or at
- * the very start — never after a bare newline, so a filler phrase opening a soft-wrapped
+ * the very start, never after a bare newline, so a filler phrase opening a soft-wrapped
  * line does not wrongly capitalise a mid-sentence continuation.
  */
 function healPunctuation(s: string): string {
@@ -95,7 +95,7 @@ export function transformFillerWords(
         continue;
       }
 
-      // soften: delete — pick the span to cut based on surrounding punctuation
+      // soften: delete, picking the span to cut based on surrounding punctuation
       let cutStart = ms;
       let cutEnd = me;
       if (atSentenceStart(text, ms)) {

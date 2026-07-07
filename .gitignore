@@ -35,7 +35,7 @@ yarn-error.*
 .DS_Store
 *.pem
 
-# local env files (broad — this app handles API keys; never commit a .env)
+# local env files (broad: this app handles API keys; never commit a .env)
 .env
 .env.*
 !.env.example
