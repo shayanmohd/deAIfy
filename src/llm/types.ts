@@ -5,29 +5,13 @@ export interface ModelOption {
   label: string;
 }
 
-export interface LlmConfig {
-  providerId: ProviderId;
-  apiKey: string;
-  model: string;
-}
-
 export interface LlmProvider {
+  /** Zibby's request format for these models (not necessarily the model's maker). */
   id: ProviderId;
   label: string;
   defaultModel: string;
+  /** Model ids from Zibby's catalog. Anything else is refused as unknown_model. */
   models: ModelOption[];
-  /** How the user obtains a key, surfaced in Settings. */
-  keyHint: string;
-  /** Returns ONLY the rewritten text. Throws LlmError on failure. */
-  rewrite(input: string, cfg: LlmConfig, signal?: AbortSignal): Promise<string>;
-}
-
-export class LlmError extends Error {
-  constructor(
-    message: string,
-    readonly status?: number
-  ) {
-    super(message);
-    this.name = 'LlmError';
-  }
+  /** The provider-native request body. Zibby's /api/ai proxy forwards it untouched. */
+  payload(input: string, model: string): Record<string, unknown>;
 }
