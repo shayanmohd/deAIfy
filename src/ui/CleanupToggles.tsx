@@ -18,9 +18,10 @@ export function CleanupToggles({ cleanup, onChange }: Props) {
           value={cleanup.dashes}
           onChange={(dashes) => onChange({ dashes })}
           options={[
-            { value: 'spacedHyphen', label: ' - ' },
-            { value: 'comma', label: ', ' },
-            { value: 'hyphen', label: '-' },
+            // Each label shows what an em dash between a and b becomes; a bare " - " looked like "-".
+            { value: 'spacedHyphen', label: 'a - b' },
+            { value: 'comma', label: 'a, b' },
+            { value: 'hyphen', label: 'a-b' },
             { value: 'off', label: 'Off' },
           ]}
         />

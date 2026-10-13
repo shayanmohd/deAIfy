@@ -64,7 +64,7 @@ export default function HomeScreen() {
             onChange={setMode}
             options={[
               { value: 'clean', label: 'Cleanup (free)' },
-              { value: 'pro', label: 'AI rewrite (Pro)' },
+              { value: 'pro', label: 'AI rewrite' },
             ]}
           />
 
